@@ -45,3 +45,28 @@ if (isset($_GET['couleur'])) {
 </body>
 </html>
 
+<!-- CORRECTION -->
+
+<style>
+    body {
+        background: <?= (isset($_GET['color'])) ? $_GET['color'] : "white" ?>;
+    }
+</style>
+
+<form action="" method="">
+        <input type="color" name="color" id="color">
+        <input type="submit" value="Appliquer la couleur sélectionnée">
+</form>
+
+<!-- CORRECTION RÉDUITE -->
+
+<style>
+    body {
+        background: <?= $_GET['color'] ?? 'white' ?>;
+    }
+</style>
+
+<form action="" method="">
+        <input type="color" name="color" id="color">
+        <input type="submit" value="Appliquer la couleur sélectionnée">
+</form>
